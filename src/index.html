@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
-    <title>Cifrado Cesar</title>
+    <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
+
   <body>
+
     <section class="conteiner">
+
       <header>
         <h1>Cipher</h1>
       </header>
+
       <div id="button-header">
-        <p>Cipher es una herramienta que te permite cifrar y descifrar texto a traves de un algoritmo de cifrado.</p>
+        <p>Cipher es tu mensajero confidencial. </p>
+        <p>Una herramienta que ayudarÃ¡ a proteger la privacidad de tus mensajes mientras te comunicas con tus amigos.</p>
       </div>
-    <div id="instructions-button">
-      <button id="instructions" type="button">¿Cómo funciona?</button>
+
+      <button id="instructions" type="button">Â¿CÃ³mo funciona?</button>
+      <fieldset>
           <div id="alerta">
-          <p>Paso 1: Para cifrar, ingresa el mensaje que deseas comunicar</p>
-          <p>Paso 2: Código Secreto, coloca un número dentro de la Llave.Ese será la clave que necesitará tu texto para ser cifrado</p>
-          <p>Paso 3: -Dale al botón cifrar y ¡obtienes tu texto codificado!
-            -Copia o escribe el mensaje a la persona con la que te quieres comunicar.
-            -Recuerda comentarle el #(la clave) para que tu contacto pueda descifrar el texto.
-            +Envíale la aplicación y a ¡esperar su respuesta!</p>
+          <button id="img-chat"></button>
+          <p>Crea un mensaje secreto, ingresa la llave, presiona cifrar y envÃ­a el mensaje oculto a tus amigos.</p>
+          <p>Para descifrarlo, tendrÃ¡n que utilizar la misma clave utilizada para el cifrado. </p>
+          <p>Â¡QuÃ© te diviertas! </p>
           </div>
-        </div>
-      <div id="input-offset">
-        <label for="offSet">Ingresa tu clave secreta</label>
-        <input type="number" min="0" id ="offSet">
-      </div>
+      </fieldset>
 
       <div id="clean-and-copy">
         <button id="clean" ></button>
@@ -37,25 +38,27 @@
 
       <section id="main">
         <form class="inputText">
-          <textarea id ="text1" placeholder="Ingresa tu mensaje"
+          <textarea id ="enter-text" placeholder="Ingresa tu mensaje"
           rows="10" cols="100"></textarea>
         </form>
 
         <fieldset id="buttons">
+          <div id="input-offset">
+            <label for="offSet">Ingresa tu clave secreta</label>
+            <input type="number" min="0" id ="offSet">
+          </div>
           <button id="encode">Cifrar</button>
           <button id="decode">Descifrar</button>
         </fieldset>
 
         <form class="inputText">
-          <textarea readonly id ="text2" placeholder="Aqui aparecerá tu texto cifrado/descifrado"
+          <textarea readonly id ="result" placeholder="Aqui aparecerÃ¡ tu texto cifrado/descifrado"
           rows="10" cols="100"></textarea>
         </form>
 
       </section>
 
-
-
-      <footer><p1> pie de pagina </p1></footer>
+      <footer><p1> Realizado por: Laura Lozano </p1></footer>
     </section >
   <script src="cipher.js"></script>
   <script src="index.js"></script>

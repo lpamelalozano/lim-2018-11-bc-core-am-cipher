@@ -1,16 +1,18 @@
 window.cipher = {
   encode: (offSet,string)=>{
     let show = '';
+    let asciiCode;
+    let convertedLetter;
 
     //let convertedLetter = 0;
 
     for (let i=0; i < string.length; i++){
 
-    const asciiCode=string.charCodeAt(i);
+    asciiCode=string.charCodeAt(i);
 
   //mayusculas
     if (asciiCode >=65 && asciiCode <=90){
-      convertedLetter= ((asciiCode - 65 + offSet)%26+65);
+      convertedLetter= ((asciiCode - 65 + offSet) %26+65);
       show+=String.fromCharCode(convertedLetter);
 
   //minusculas
@@ -29,10 +31,11 @@ window.cipher = {
   decode: (offSet,string)=>{
     let show = '';
     let convertedLetter = 0;
+    let asciiCode;
 
     for (let i=0; i < string.length; i++){
 
-    const asciiCode=string.charCodeAt(i);
+    asciiCode=string.charCodeAt(i);
 
    //mayusculas
     if (asciiCode >=65 && asciiCode <=90){

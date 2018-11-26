@@ -1,13 +1,12 @@
 //Declarando costantes
 const inputElementOffSet = document.getElementById('offSet');
-const inputElementText1 = document.getElementById('text1');
-const inputElementText2 = document.getElementById('text2');
+const inputElementEnterText = document.getElementById('enter-text');
+const inputElementResult = document.getElementById('result');
 const buttonEncode = document.getElementById('encode');
 const buttonDecode = document.getElementById('decode');
 const buttonClean = document.getElementById('clean');
 const buttonCopy = document.getElementById('copy');
 const btnInstructions = document.getElementById("instructions");
-
 
 //Agregando una funcion al evento click de los button
 function showStep() {
@@ -21,30 +20,30 @@ btnInstructions.addEventListener("click", ()=>{
 
 buttonEncode.addEventListener('click', () =>{
     const offSet= parseInt(inputElementOffSet.value)
-    inputElementText2.value=cipher.encode(offSet,inputElementText1.value );
+    inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value );
 })
 
 
 buttonDecode.addEventListener('click', () =>{
     const offSet= parseInt(inputElementOffSet.value)
-   inputElementText2.value=cipher.decode(offSet,inputElementText1.value );
+   inputElementResult.value=cipher.decode(offSet,inputElementEnterText.value );
 })
 
 buttonClean.addEventListener('click', () =>{
     inputElementOffSet.value='';
-    inputElementText1.value='';
-    inputElementText2.value='';
+    inputElementEnterText.value='';
+    inputElementResult.value='';
 })
 
 buttonCopy.addEventListener('click', (id_elemento) =>{
-        id_elemento=inputElementText2.value;
+        id_elemento=inputElementResult.value;
         // Crea un campo de texto "oculto"
          const aux = document.createElement("input");
 
         // Asigna el contenido del elemento especificado al valor del campo
         aux.setAttribute("value", id_elemento);
 
-        // Añade el campo a la página
+        // Aï¿½ade el campo a la pï¿½gina
         document.body.appendChild(aux);
 
         // Selecciona el contenido del campo
@@ -53,7 +52,7 @@ buttonCopy.addEventListener('click', (id_elemento) =>{
         // Copia el texto seleccionado
         document.execCommand("copy");
 
-        // Elimina el campo de la página
+        // Elimina el campo de la pï¿½gina
         document.body.removeChild(aux);
 
         //console.log("texto copiado")
