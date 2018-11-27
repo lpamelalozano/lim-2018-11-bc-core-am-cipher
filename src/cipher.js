@@ -1,5 +1,5 @@
 window.cipher = {
-  encode: (offSet,string)=>{
+  encode: (offSet, string) => {
     let show = '';
     let asciiCode;
     let convertMessage;
@@ -77,7 +77,6 @@ window.cipher = {
           cipher.encode(offSet,string),
         decode: (string) =>
           cipher.decode(offSet,string)
-
       };
 
      return objectCipher;

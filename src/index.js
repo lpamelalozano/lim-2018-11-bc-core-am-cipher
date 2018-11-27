@@ -8,32 +8,31 @@ const buttonClean = document.getElementById('clean');
 const buttonCopy = document.getElementById('copy');
 const btnInstructions = document.getElementById("instructions");
 
-//Agregando una funcion al evento click de los button
 function showStep() {
     const x = document.getElementById('alerta');
     x.classList.toggle("visible");
 }
 
-btnInstructions.addEventListener("click", ()=>{
+btnInstructions.addEventListener("click", () => {
   showStep();
-})
+});
 
 buttonEncode.addEventListener('click', () =>{
-    const offSet= parseInt(inputElementOffSet.value)
+    const offSet= parseInt(inputElementOffSet.value);
     inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value );
-})
+});
 
 
 buttonDecode.addEventListener('click', () =>{
-    const offSet= parseInt(inputElementOffSet.value)
+    const offSet= parseInt(inputElementOffSet.value);
    inputElementResult.value=cipher.decode(offSet,inputElementEnterText.value );
-})
+});
 
 buttonClean.addEventListener('click', () =>{
     inputElementOffSet.value='';
     inputElementEnterText.value='';
     inputElementResult.value='';
-})
+});
 
 buttonCopy.addEventListener('click', (id_elemento) =>{
         id_elemento=inputElementResult.value;
@@ -43,7 +42,7 @@ buttonCopy.addEventListener('click', (id_elemento) =>{
         // Asigna el contenido del elemento especificado al valor del campo
         aux.setAttribute("value", id_elemento);
 
-        // A�ade el campo a la p�gina
+        // Anade el campo a la pagina
         document.body.appendChild(aux);
 
         // Selecciona el contenido del campo
@@ -52,9 +51,8 @@ buttonCopy.addEventListener('click', (id_elemento) =>{
         // Copia el texto seleccionado
         document.execCommand("copy");
 
-        // Elimina el campo de la p�gina
+        // Elimina el campo de la pagina
         document.body.removeChild(aux);
 
         //console.log("texto copiado")
-
-})
+});
