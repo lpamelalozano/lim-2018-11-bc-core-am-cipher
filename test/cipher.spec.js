@@ -42,13 +42,11 @@ describe('cipher', () => {
     });
 
     it('debería retornar "!-+}$%& " para "!-+}$%& " con offset 33',() =>{
-      assert.equal(cipher.decode(33,"!-+}$%& "),"!-+}$%& ");
+      assert.equal(cipher.decode(33,"!-+}$%& "),"!-+}$%& "); // agregar test de numeros
     });
-
   });
 
   describe('cipher.createCipherWithOffset', () => {
-
     it('debería ser una función', () => {
       assert.equal(typeof cipher.createCipherWithOffset, 'function');
     });
