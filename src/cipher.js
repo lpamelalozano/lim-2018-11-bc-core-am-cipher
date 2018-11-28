@@ -1,15 +1,12 @@
 window.cipher = {
-  encode: (offSet,string)=>{
+  encode: (offSet, string) => {
     let show = '';
     let asciiCode;
     let convertMessage;
 
     //let convertMessage = 0;
-
     for (let i=0; i < string.length; i++){
-
     asciiCode=string.charCodeAt(i);
-
   //mayusculas
     if (asciiCode >=65 && asciiCode <=90){
       convertMessage = ((asciiCode - 65 + offSet) %26+65);
@@ -42,19 +39,12 @@ window.cipher = {
 
    //mayusculas
     if (asciiCode >=65 && asciiCode <=90){
-
       convertMessage = (asciiCode - 90 - offSet) % 26 + 90;
-
-
       show+=String.fromCharCode(convertMessage);
-
 
   //minusculas
     }else if (asciiCode >=97 && asciiCode <=122) {
-
       convertMessage = (asciiCode - 122 - offSet) % 26 + 122;
-
-
       show+=String.fromCharCode(convertMessage);
 
     }else if (asciiCode >=48 && asciiCode <=57) {
@@ -70,14 +60,12 @@ window.cipher = {
     return show;
   },
 
-
   createCipherWithOffset: (offSet)=> {
       let objectCipher = {
         encode: (string) =>
           cipher.encode(offSet,string),
         decode: (string) =>
           cipher.decode(offSet,string)
-
       };
 
      return objectCipher;
