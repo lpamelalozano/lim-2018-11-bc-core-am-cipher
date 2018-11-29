@@ -8,6 +8,8 @@ const buttonClean = document.getElementById('clean');
 const buttonCopy = document.getElementById('copy');
 const btnInstructions = document.getElementById("instructions");
 
+
+
 function showStep() {
     const x = document.getElementById('alerta');
     x.classList.toggle("visible");
@@ -19,9 +21,8 @@ btnInstructions.addEventListener("click", () => {
 
 buttonEncode.addEventListener('click', () =>{
     const offSet= parseInt(inputElementOffSet.value);
-    inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value );
+      inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value );
 });
-
 
 buttonDecode.addEventListener('click', () =>{
     const offSet= parseInt(inputElementOffSet.value);
