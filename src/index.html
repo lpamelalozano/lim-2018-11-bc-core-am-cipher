@@ -9,57 +9,58 @@
   </head>
 
   <body>
-
     <section class="conteiner">
+        <header>
+          <h1>Cipher</h1>
+        </header>
 
-      <header>
-        <h1>Cipher</h1>
-      </header>
+        <div id="button-header">
+          <p>Cipher es tu mensajero confidencial. </p>
+          <p>Una herramienta que ayudará a proteger la privacidad de tus mensajes mientras te comunicas con tus amigos.</p>
+        </div>
 
-      <div id="button-header">
-        <p>Cipher es tu mensajero confidencial. </p>
-        <p>Una herramienta que ayudará a proteger la privacidad de tus mensajes mientras te comunicas con tus amigos.</p>
-      </div>
+        <button id="instructions" type="button">¿Cómo funciona?</button>
 
-      <button id="instructions" type="button">¿Cómo funciona?</button>
-      <fieldset>
-          <div id="alerta">
-          <button id="img-chat"></button>
-          <p>Crea un mensaje secreto, ingresa la llave, presiona cifrar y envía el mensaje oculto a tus amigos.</p>
-          <p>Para descifrarlo, tendrán que utilizar la misma clave utilizada para el cifrado. </p>
-          <p>¡Qué te diviertas! </p>
+          <fieldset>
+            <div id="alerta">
+            <button id="img-chat"></button>
+            <p>Crea un mensaje secreto, ingresa la llave, presiona cifrar y envía el mensaje oculto a tus amigos.</p>
+            <p>Para descifrarlo, tendrán que utilizar la misma clave utilizada para el cifrado. </p>
+            <p>¡Qué te diviertas! </p>
+            </div>
+          </fieldset>
+
+          <div id="clean-and-copy">
+          <button id="clean" ></button>
+          <button id="copy" ></button>
           </div>
-      </fieldset>
 
-      <div id="clean-and-copy">
-        <button id="clean" ></button>
-        <button id="copy" ></button>
-      </div>
+          <section id="main">
+              <form class="inputText">
+                <textarea id ="enter-text" placeholder="Ingresa tu mensaje"
+                rows="10" cols="100"></textarea>
+              </form>
 
-      <section id="main">
-        <form class="inputText">
-          <textarea id ="enter-text" placeholder="Ingresa tu mensaje"
-          rows="10" cols="100"></textarea>
-        </form>
+              <fieldset id="buttons">
+                <div id="input-offset">
+                  <label for="offset">Ingresa tu clave secreta</label>
+                  <input type="number" min="0" id ="offset">
+                </div>
 
-        <fieldset id="buttons">
-          <div id="input-offset">
-            <label for="offSet">Ingresa tu clave secreta</label>
-            <input type="number" min="0" id ="offSet">
-          </div>
-          <button id="encode">Cifrar</button>
-          <button id="decode">Descifrar</button>
-        </fieldset>
+                <button id="encode">Cifrar</button>
+                <button id="decode">Descifrar</button>
+              </fieldset>
 
-        <form class="inputText">
-          <textarea readonly id ="result" placeholder="Aqui aparecerá tu texto cifrado/descifrado"
-          rows="10" cols="200"></textarea>
-        </form>
+              <form class="inputText">
+                <textarea readonly id ="result" placeholder="Aqui aparecerá tu texto cifrado/descifrado"
+                rows="10" cols="100"></textarea>
+              </form>
 
-      </section>
+          </section>
 
       <footer> Realizado por: Laura Lozano </footer>
-    </section >
+     </section >
+
   <script src="cipher.js"></script>
   <script src="index.js"></script>
   </body>

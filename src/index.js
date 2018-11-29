@@ -1,5 +1,5 @@
 //Declarando costantes
-const inputElementOffSet = document.getElementById('offSet');
+const inputElementOffSet = document.getElementById('offset');
 const inputElementEnterText = document.getElementById('enter-text');
 const inputElementResult = document.getElementById('result');
 const buttonEncode = document.getElementById('encode');
@@ -19,23 +19,23 @@ btnInstructions.addEventListener("click", () => {
   showStep();
 });
 
-buttonEncode.addEventListener('click', () =>{
-    const offSet= parseInt(inputElementOffSet.value);
+buttonEncode.addEventListener('click', () => {
+    const offSet = parseInt(inputElementOffSet.value);
       inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value );
 });
 
-buttonDecode.addEventListener('click', () =>{
-    const offSet= parseInt(inputElementOffSet.value);
+buttonDecode.addEventListener('click', () => {
+    const offSet = parseInt(inputElementOffSet.value);
    inputElementResult.value=cipher.decode(offSet,inputElementEnterText.value );
 });
 
-buttonClean.addEventListener('click', () =>{
-    inputElementOffSet.value='';
-    inputElementEnterText.value='';
-    inputElementResult.value='';
+buttonClean.addEventListener('click', () => {
+    inputElementOffSet.value ='';
+    inputElementEnterText.value ='';
+    inputElementResult.value ='';
 });
 
-buttonCopy.addEventListener('click', (id_elemento) =>{
+buttonCopy.addEventListener('click', (id_elemento) => {
         id_elemento=inputElementResult.value;
         // Crea un campo de texto "oculto"
          const aux = document.createElement("input");
