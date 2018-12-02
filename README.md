@@ -30,6 +30,7 @@ Para laptops, computadoras:
 ![for-laptopss](https://i.ibb.co/zFF7qpr/for-laptop.png)
 
 Para celulares:
+
 ![caeser-cipher](https://i.ibb.co/mNKk4h4/C-Users-Pamela-Documents-javascript-lim-2018-11-bc-core-am-cipher-src-index-html-i-Phone-6-7-8-1.png)
 
 Se utilizó la siguiente paleta de colores:

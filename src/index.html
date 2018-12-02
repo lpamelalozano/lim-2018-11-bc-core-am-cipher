@@ -11,11 +11,11 @@
   <body>
     <section class="container">
         <header>
-          <h1>Cipher</h1>
+          <h1>Hidden</h1>
         </header>
 
         <div id="button-header">
-          <p>Cipher es tu mensajero confidencial. </p>
+          <p>Hidden es tu mensajero confidencial. </p>
           <p>Una herramienta que ayudará a proteger la privacidad de tus mensajes mientras te comunicas con tus amigos.</p>
         </div>
 
@@ -23,16 +23,20 @@
 
           <fieldset>
             <div id="alerta">
-            <button id="img-chat"></button>
-            <p>Crea un mensaje secreto, ingresa la llave, presiona cifrar y envía el mensaje oculto a tus amigos.</p>
-            <p>Para descifrarlo, tendrán que utilizar la misma clave utilizada para el cifrado. </p>
-            <p>¡Qué te diviertas! </p>
+              <figure>
+              <img src="../imagenes/steps.png" id="steps">
+               <figcaption> <p>Ingresa un mensaje, crea una clave, presiona cifrar y envía el mensaje oculto a tus amigos.</p>
+                 <p>¡Sólo podrán descifrarlo quienes tengan la clave secreta!</p>
+                 <p>¡Qué te diviertas! </p>
+               </figcaption>
+             </figure>
             </div>
           </fieldset>
 
           <div id="clean-and-copy">
           <button id="clean" ></button>
           <button id="copy" ></button>
+          <button type="button" id="btn-whatsapp" class="icons"></button>
           </div>
 
           <section id="main">
@@ -46,9 +50,8 @@
                   <label for="offset">Ingresa tu clave secreta</label>
                   <input type="number" min="0" id ="offset">
                 </div>
-
-                <button id="encode">Cifrar</button>
-                <button id="decode">Descifrar</button>
+                <button id="encode"> <img src="../imagenes/candado.png" alt = "" class="img-encode-and-decode">CIFRAR</button>
+                <button  id="decode"> <img src="../imagenes/candado2.png" alt = "" class="img-encode-and-decode">DESCIFRAR</button>
               </fieldset>
 
               <form class="inputText">
@@ -58,9 +61,9 @@
 
           </section>
 
-      <footer> Realizado por: Laura Lozano </footer>
-     </section >
 
+     </section >
+  <footer> Realizado por: Laura Lozano </footer>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
   </body>

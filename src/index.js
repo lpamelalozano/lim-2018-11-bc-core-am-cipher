@@ -7,9 +7,13 @@ const buttonDecode = document.getElementById('decode');
 const buttonClean = document.getElementById('clean');
 const buttonCopy = document.getElementById('copy');
 const btnInstructions = document.getElementById("instructions");
+const btnWhatsapp = document.getElementById("btn-whatsapp");
+const linkToHiddenApp = " http://bit.ly/Hidden_App";
 
-
-
+btnWhatsapp.addEventListener('click', () => {
+  celPhone="https://api.whatsapp.com/send?text= "+ (document.getElementById('result').value) + linkToHiddenApp;
+  window.open(celPhone);
+});
 function showStep() {
     const x = document.getElementById('alerta');
     x.classList.toggle("visible");
@@ -39,7 +43,6 @@ buttonCopy.addEventListener('click', (id_elemento) => {
         id_elemento=inputElementResult.value;
         // Crea un campo de texto "oculto"
          const aux = document.createElement("input");
-
         // Asigna el contenido del elemento especificado al valor del campo
         aux.setAttribute("value", id_elemento);
 
