@@ -10,9 +10,10 @@ const btnInstructions = document.getElementById("instructions");
 const btnWhatsapp = document.getElementById("btn-whatsapp");
 const linkToHiddenApp = " http://bit.ly/Hidden_App";
 
+
 btnWhatsapp.addEventListener('click', () => {
-  celPhone="https://api.whatsapp.com/send?text= "+ (document.getElementById('result').value) + linkToHiddenApp;
-  window.open(celPhone);
+const sendMessage="https://api.whatsapp.com/send?text= "+ (document.getElementById('result').value) + linkToHiddenApp;
+  window.open(sendMessage);
 });
 function showStep() {
     const x = document.getElementById('alerta');
