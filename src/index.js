@@ -16,9 +16,11 @@ const sendMessage="https://api.whatsapp.com/send?text= "+ (document.getElementBy
   window.open(sendMessage);
 });
 
+
+//alternar visibilidad del elemento
 function showStep() {
     const x = document.getElementById('alerta');
-    x.classList.toggle("visible");
+    x.classList.toggle("visible"); // si visible está presente la elimina, de lo contrario la añade
 }
 
 btnInstructions.addEventListener("click", () => {
