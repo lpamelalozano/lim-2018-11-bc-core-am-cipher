@@ -201,7 +201,7 @@ figure {
 
 }
 
-.inputText{
+.input-text{
    text-align: center;
    width:80% ;
    float: left;
@@ -317,7 +317,7 @@ header {
   margin: 0px 2px;
 }
 
-.inputText {
+.input-text {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -456,7 +456,7 @@ header {
   margin: 0px 2px;
 }
 
-.inputText {
+.input-text {
     display: flex;
     justify-content: center;
     width: 100%;

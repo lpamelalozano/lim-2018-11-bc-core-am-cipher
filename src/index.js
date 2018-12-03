@@ -15,6 +15,7 @@ btnWhatsapp.addEventListener('click', () => {
 const sendMessage="https://api.whatsapp.com/send?text= "+ (document.getElementById('result').value) + linkToHiddenApp;
   window.open(sendMessage);
 });
+
 function showStep() {
     const x = document.getElementById('alerta');
     x.classList.toggle("visible");
