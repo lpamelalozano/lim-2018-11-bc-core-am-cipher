@@ -29,7 +29,7 @@ btnInstructions.addEventListener("click", () => {
 
 buttonEncode.addEventListener('click', () => {
     const offSet = parseInt(inputElementOffSet.value);
-      inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value );
+      inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value);
 });
 
 buttonDecode.addEventListener('click', () => {
