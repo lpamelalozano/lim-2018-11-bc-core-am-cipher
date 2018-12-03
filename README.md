@@ -88,7 +88,7 @@ En relacion al HTML, manejé una estructura básica de entrada y salida de texto
       rows="10" cols="100"></textarea>
     </form>
 
-> **input-offset** Contiene el valor de la entrada de texto
+> **input-offset** Hace referencia a la Clave Secreta, contiene el valor del desplazamiento a utilizarse para la fórmula del cifrado
 
     <div id="input-offset">
         <label for="offset">Ingresa tu clave secreta</label>
