@@ -1,70 +1,56 @@
 window.cipher = {
+
   encode: (offSet, string) => {
-    let show = '';
-    let asciiCode;
-    let convertMessage;
-
-    //let convertMessage = 0;
-    for (let i=0; i < string.length; i++) {
-        asciiCode=string.charCodeAt(i);
-        //mayusculas
-        if (asciiCode >= 65 && asciiCode <= 90) {
-            convertMessage = ((asciiCode - 65 + offSet) % 26 + 65);
-            show+=String.fromCharCode(convertMessage);
-        }
-        //minusculas
-        else if (asciiCode >= 97 && asciiCode <= 122) {
-                  convertMessage = ((asciiCode - 97 + offSet) % 26 + 97);
-                  show+=String.fromCharCode(convertMessage);
-        }
-        // numeros
-        else if (asciiCode >= 48 && asciiCode <= 57) {
-                  convertMessage = ((asciiCode - 48 + offSet) % 10 + 48);
-                  show+=String.fromCharCode(convertMessage);
-        }
-        //otro caracter
-        else {
-          show+=String.fromCharCode(asciiCode);
-        }
+    let key = parseInt(offSet);
+    let convertMessage = ''; 
+    let result = '';  
+    key = offSet % 26;
+    key2 = offSet %10;
+    
+    for (let i = 0; i < string.length; i++) {  
+      let asciiCharacter = string.charCodeAt(i);
+      if (asciiCharacter >= 65 && asciiCharacter <= 90) { 
+        convertMessage = (asciiCharacter - 65 + key) % 26 + 65;
+      } else if (asciiCharacter >= 97 && asciiCharacter <= 122) { 
+        convertMessage = (asciiCharacter - 97 + key) % 26 + 97;
+      } else if (asciiCharacter >= 48 && asciiCharacter <= 57) { 
+      convertMessage = (asciiCharacter - 48 + key2) % 10 + 48;
+    }else {
+        convertMessage = asciiCharacter; 
+      } result += String.fromCharCode(convertMessage); 
     }
-    return show;
+    return result;  
   },
 
-  decode: (offSet,string) => {
-    let show = '';
-    let convertMessage = 0;
-    let asciiCode;
-
-    for (let i=0; i < string.length; i++) {
-        asciiCode=string.charCodeAt(i);
-        
-        if (asciiCode >= 65 && asciiCode <= 90) {
-            convertMessage = (asciiCode - 90 - offSet) % 26 + 90;
-            show+=String.fromCharCode(convertMessage);
-        }
-        else if (asciiCode >= 97 && asciiCode <= 122) {
-                convertMessage = (asciiCode - 122 - offSet) % 26 + 122;
-                show+=String.fromCharCode(convertMessage);
-        }
-        else if (asciiCode >= 48 && asciiCode <= 57) {
-                convertMessage = (asciiCode - 57 - offSet) % 10 + 57;
-                show+=String.fromCharCode(convertMessage);
-        }
-        else {
-          show+=String.fromCharCode(asciiCode);
-        }
+  ///METODO DESCIFRAR: Declarando función para descifrar una cadena de texto
+  decode: (offSet, string) => {
+    let key = parseInt(offSet); 
+    let convertMessage = ''; 
+    let result = ''; 
+    key = offSet % 26; 
+    for (let i = 0; i < string.length; i++) {  
+      let asciiCharacter = string.charCodeAt(i);
+      if (asciiCharacter >= 65 && asciiCharacter <= 90) { 
+        convertMessage = (asciiCharacter - 65 - key + 26 * 2) % 26 + 65;
+      } else if (asciiCharacter >= 97 && asciiCharacter <= 122) {
+        convertMessage = (asciiCharacter - 97 - key + 26 * 2) % 26 + 97;
+       } else if (asciiCharacter >= 48 && asciiCharacter <= 57) {
+          convertMessage = (asciiCharacter - 48 - key2 + 10 * 2) % 10 + 48;
+      } else {
+        convertMessage = asciiCharacter; 
+      } result += String.fromCharCode(convertMessage); 
     }
-    return show;
+    return result; 
   },
 
-  createCipherWithOffset: (offSet)=> {
-      let objectCipher = {
-        encode: (string) =>
-          cipher.encode(offSet,string),
-        decode: (string) =>
-          cipher.decode(offSet,string)
-      };
+createCipherWithoffSet: (offSet) => {
+  let objectCipher = {
+    encode: (string) =>
+      cipher.encode(offSet, string),
+    decode: (string) =>
+      cipher.decode(offSet, string)
+  };
 
-     return objectCipher;
-  }
+  return objectCipher;
+}
 };

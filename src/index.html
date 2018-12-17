@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang ="es">
+<html lang="es">
 
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
 
-  <body>
-    <section class="container">
-        <header>
-          <h1>Hidden</h1>
-        </header>
+<body>
+  <section class="container">
+    <header>
+      <h1>Hidden</h1>
+    </header>
 
-        <div id="button-header">
-          <p>Hidden es tu mensajero confidencial. </p>
-          <p>Una herramienta que ayudará a proteger la privacidad de tus mensajes mientras te comunicas con tus amigos.</p>
+    <div id="button-header">
+      <p>Hidden es tu mensajero confidencial. </p>
+      <p>Una herramienta que ayudará a proteger la privacidad de tus mensajes mientras te comunicas con tus amigos.</p>
+    </div>
+
+    <button id="instructions" type="button">¿Cómo funciona?</button>
+
+    <fieldset>
+      <div id="alerta">
+        <figure>
+          <img src="../imagenes/steps.png" id="steps">
+          <figcaption>
+            <p>Ingresa un mensaje, crea una clave, presiona cifrar y envía el mensaje oculto a tus amigos.</p>
+            <p>¡Sólo podrán descifrarlo quienes tengan la clave secreta!</p>
+            <p>¡Qué te diviertas! </p>
+          </figcaption>
+        </figure>
+      </div>
+    </fieldset>
+
+    <div id="clean-and-copy">
+      <button id="clean"></button>
+      <button id="copy"></button>
+      <button type="button" id="btn-whatsapp" class="icons"></button>
+    </div>
+
+    <section id="main">
+      <form class="input-text">
+        <textarea id="enter-text" placeholder="Ingresa tu mensaje" rows="10" cols="100"></textarea>
+      </form>
+
+      <fieldset id="buttons">
+        <div id="input-offset">
+          <label for="offset">Ingresa tu clave secreta</label>
+          <input type="number" min="0" id="offset">
         </div>
+        <button id="encode"> <img src="../imagenes/candado.png" alt="" class="img-encode-and-decode">CIFRAR</button>
+        <button id="decode"> <img src="../imagenes/candado2.png" alt="" class="img-encode-and-decode">DESCIFRAR</button>
+      </fieldset>
 
-        <button id="instructions" type="button">¿Cómo funciona?</button>
+      <form class="input-text">
+        <textarea readonly id="result" placeholder="Aqui aparecerá tu texto cifrado/descifrado" rows="10" cols="100"></textarea>
+      </form>
 
-          <fieldset>
-            <div id="alerta">
-              <figure>
-              <img src="../imagenes/steps.png" id="steps">
-               <figcaption> <p>Ingresa un mensaje, crea una clave, presiona cifrar y envía el mensaje oculto a tus amigos.</p>
-                 <p>¡Sólo podrán descifrarlo quienes tengan la clave secreta!</p>
-                 <p>¡Qué te diviertas! </p>
-               </figcaption>
-             </figure>
-            </div>
-          </fieldset>
-
-          <div id="clean-and-copy">
-          <button id="clean" ></button>
-          <button id="copy" ></button>
-          <button type="button" id="btn-whatsapp" class="icons"></button>
-          </div>
-
-          <section id="main">
-              <form class="input-text">
-                <textarea id ="enter-text" placeholder="Ingresa tu mensaje"
-                rows="10" cols="100"></textarea>
-              </form>
-
-              <fieldset id="buttons">
-                <div id="input-offset">
-                  <label for="offset">Ingresa tu clave secreta</label>
-                  <input type="number" min="0" id ="offset">
-                </div>
-                <button id="encode"> <img src="../imagenes/candado.png" alt = "" class="img-encode-and-decode">CIFRAR</button>
-                <button  id="decode"> <img src="../imagenes/candado2.png" alt = "" class="img-encode-and-decode">DESCIFRAR</button>
-              </fieldset>
-
-              <form class="input-text">
-                <textarea readonly id ="result" placeholder="Aqui aparecerá tu texto cifrado/descifrado"
-                rows="10" cols="100"></textarea>
-              </form>
-
-          </section>
+    </section>
 
 
-     </section >
+  </section>
   <footer> Realizado por: Laura Lozano </footer>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
-  </body>
+</body>
+
 </html>

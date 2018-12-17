@@ -12,8 +12,8 @@ const linkToHiddenApp = " http://bit.ly/Hidden_App";
 
 
 btnWhatsapp.addEventListener('click', () => {
-const sendMessage="https://api.whatsapp.com/send?text= "+ (document.getElementById('result').value) + linkToHiddenApp;
-  window.open(sendMessage);
+    const sendMessage = "https://api.whatsapp.com/send?text= " + (document.getElementById('result').value) + linkToHiddenApp;
+    window.open(sendMessage);
 });
 
 
@@ -24,43 +24,43 @@ function showStep() {
 }
 
 btnInstructions.addEventListener("click", () => {
-  showStep();
+    showStep();
 });
 
 buttonEncode.addEventListener('click', () => {
     const offSet = parseInt(inputElementOffSet.value);
-      inputElementResult.value=cipher.encode(offSet,inputElementEnterText.value);
+    inputElementResult.value = cipher.encode(offSet, inputElementEnterText.value);
 });
 
 buttonDecode.addEventListener('click', () => {
     const offSet = parseInt(inputElementOffSet.value);
-   inputElementResult.value=cipher.decode(offSet,inputElementEnterText.value );
+    inputElementResult.value = cipher.decode(offSet, inputElementEnterText.value);
 });
 
 buttonClean.addEventListener('click', () => {
-    inputElementOffSet.value ='';
-    inputElementEnterText.value ='';
-    inputElementResult.value ='';
+    inputElementOffSet.value = '';
+    inputElementEnterText.value = '';
+    inputElementResult.value = '';
 });
 
 buttonCopy.addEventListener('click', (id_elemento) => {
-        id_elemento=inputElementResult.value;
-        // Crea un campo de texto "oculto"
-         const aux = document.createElement("input");
-        // Asigna el contenido del elemento especificado al valor del campo
-        aux.setAttribute("value", id_elemento);
+    id_elemento = inputElementResult.value;
+    // Crea un campo de texto "oculto"
+    const aux = document.createElement("input");
+    // Asigna el contenido del elemento especificado al valor del campo
+    aux.setAttribute("value", id_elemento);
 
-        // Anade el campo a la pagina
-        document.body.appendChild(aux);
+    // Anade el campo a la pagina
+    document.body.appendChild(aux);
 
-        // Selecciona el contenido del campo
-        aux.select();
+    // Selecciona el contenido del campo
+    aux.select();
 
-        // Copia el texto seleccionado
-        document.execCommand("copy");
+    // Copia el texto seleccionado
+    document.execCommand("copy");
 
-        // Elimina el campo de la pagina
-        document.body.removeChild(aux);
+    // Elimina el campo de la pagina
+    document.body.removeChild(aux);
 
-        //console.log("texto copiado")
+    //console.log("texto copiado")
 });
